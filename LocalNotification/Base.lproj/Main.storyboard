@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LocalNotification" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="タイトル" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OnX-ib-BpL">
+                                <rect key="frame" x="20" y="125" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="内容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ltk-he-ftd">
+                                <rect key="frame" x="20" y="215" width="374" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                            </textField>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yg9-4Q-MfK">
+                                <rect key="frame" x="0.0" y="367" width="414" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="T8U-Or-CdM"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="577653284.61531794">
+                                    <!--2019-04-22 19:14:44 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ja_JP"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fWD-AZ-iGT">
+                                <rect key="frame" x="148" y="636" width="118" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="lT0-Qw-cIQ"/>
+                                </constraints>
+                                <state key="normal" title="登録"/>
+                                <connections>
+                                    <action selector="didClickButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cC2-WJ-isH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ltk-he-ftd" firstAttribute="centerX" secondItem="Yg9-4Q-MfK" secondAttribute="centerX" id="EUM-Vt-Ogl"/>
+                            <constraint firstItem="Ltk-he-ftd" firstAttribute="top" secondItem="OnX-ib-BpL" secondAttribute="bottom" constant="60" id="ErW-hk-Tza"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fWD-AZ-iGT" secondAttribute="bottom" constant="159" id="HGS-wm-bD2"/>
+                            <constraint firstItem="OnX-ib-BpL" firstAttribute="leading" secondItem="Ltk-he-ftd" secondAttribute="leading" id="SI6-42-42K"/>
+                            <constraint firstItem="Yg9-4Q-MfK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="YAC-In-QbU"/>
+                            <constraint firstItem="OnX-ib-BpL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="81" id="aZs-ik-BZR"/>
+                            <constraint firstItem="fWD-AZ-iGT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="148" id="dSl-s0-YE4"/>
+                            <constraint firstItem="OnX-ib-BpL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="g5U-n9-13H"/>
+                            <constraint firstItem="Yg9-4Q-MfK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kno-FK-zsZ"/>
+                            <constraint firstItem="OnX-ib-BpL" firstAttribute="trailing" secondItem="Ltk-he-ftd" secondAttribute="trailing" id="sYt-TA-02f"/>
+                            <constraint firstAttribute="trailing" secondItem="Yg9-4Q-MfK" secondAttribute="trailing" id="w3W-lw-XTG"/>
+                            <constraint firstItem="Yg9-4Q-MfK" firstAttribute="centerX" secondItem="fWD-AZ-iGT" secondAttribute="centerX" id="wJy-yX-cse"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Yg9-4Q-MfK" id="3KD-Ww-29r"/>
+                        <outlet property="textFieldForContent" destination="Ltk-he-ftd" id="YeF-DX-pcs"/>
+                        <outlet property="textFieldForTitle" destination="OnX-ib-BpL" id="mTD-zX-amW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-217" y="127"/>
+        </scene>
+    </scenes>
+</document>
